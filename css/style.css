@@ -883,5 +883,21 @@ input[type=text], input[type=password] {
 
 /*lodeer section end */
 
+@media screen and (max-width:600px)
+{
+    h1{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .testimonial
+{
+    max-width: 400px;
+}
 
+.user-pic
+{
+    width: 40px;
+}
+
+}
 
