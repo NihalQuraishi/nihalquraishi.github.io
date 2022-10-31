@@ -61,7 +61,7 @@ body
             content: '';
             position: absolute;
             inset: 6px;
-            background: #070a1c;
+            background: black;
             border-radius: 50%;
             z-index: 1;
         }
