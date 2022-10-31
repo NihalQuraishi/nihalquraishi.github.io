@@ -166,76 +166,7 @@ body
 }
 
 
-/* about section start
 
-.about
-{
-    border-radius: 20px;
-}
-
-.sub-title
-{
-    font-size: 60px;
-    font-weight: 600;
-}
-
-
-.about-title
-{
-    display: flex;
-    margin: 20px 0 40px;
-}
-
-.tab-links
-{
-   margin-right: 50px;
-   font-size: 18px;
-   font-weight: 500;
-   cursor: pointer;
-   position: relative;
-}
-
-.tab-links::after
-{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: crimson;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links.active-link::after
-{
-    width: 50%;
-}
-
-.tab-contents ul li
-{
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span
-{
-    color: crimson;
-    font-size: 14px;
-}
-
-.tab-contents
-{
-    display: none;
-}
-
-.tab-contents.active-tab
-{
-    display: block;
-}
-
-
- about section end*/
 
 /* services section start*/
 
@@ -386,6 +317,129 @@ body
 
 
 /*about section start*/
+
+/* about img section start */
+
+.about-img
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(0, 0, 0,0.75);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-img::before
+{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;
+}
+.about-img::after
+{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,red);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.about-img span
+{
+position: absolute;
+inset: 5px;
+border-radius: 16px;
+background: #0c1022;
+z-index: 1;
+}
+
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 290px;
+    height: 390px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: black;
+    color: black;
+    border-radius: 16px;
+  }
+
+  .nihal-pic img
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:black;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 16px;
+  }
+/* about img section end */
 
 .about h1
 {
