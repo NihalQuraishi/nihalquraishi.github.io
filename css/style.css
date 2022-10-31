@@ -21,11 +21,12 @@ body
 .box
         {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: rgba(0, 0, 0,0.5);
             border-radius: 50%;
             overflow: hidden;
+            margin-top: 100px;
         }
 
         .box::before
@@ -60,7 +61,7 @@ body
             content: '';
             position: absolute;
             inset: 6px;
-            background: #162052;
+            background: #070a1c;
             border-radius: 50%;
             z-index: 1;
         }
